@@ -1,4 +1,5 @@
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
 
@@ -29,6 +30,15 @@ const Navbar = () => {
     }, [])
 
 
+    document.addEventListener('click', function (event) {
+        const dropdown = document.querySelector('.dropdown');
+
+        if (!dropdown.contains(event.target)) {
+            dropdown.removeAttribute('open');
+        }
+    });
+
+
 
     return (
         <div>
@@ -36,13 +46,17 @@ const Navbar = () => {
             <nav className="bg-white border-gray-200 dark:bg-gray-900 lg:px-14 md:px-10 px-3">
                 <div className="lg:flex md:flex justify-between items-center mx-auto p-4 lg:space-y-0 md:space-y-0 space-y-3">
                     <a href="/" className="flex items-center">
-                        <img src="https://i.ibb.co/bK8WP9x/favicon.png" className="h-8 mr-3" alt="Flowbite Logo" />
+                        <img src="https://i.ibb.co/bK8WP9x/favicon.png" className="h-10 mr-3" alt="EdenEnclave Logo" />
+                        <div>
                         <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Eden<span className='text-[#05ac39]'>Enclave</span></h1>
+                        <p className='text-xs tracking-wider'>ELEVATE YOUR GREENERY</p>
+                        </div>
+
                     </a>
                     <div className="flex items-center gap-4">
                         <div className='flex items-center gap-4'>
                             <div className="relative">
-                                <img className="w-8 h-8 rounded-full" src={"https://i.ibb.co/JKgdVyn/27470334-7309681.jpg"} alt="" />
+                                <img className="w-10 h-10 rounded-full" src={"https://i.ibb.co/JKgdVyn/27470334-7309681.jpg"} alt="" />
                                 <span className="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-[#05ac39] border-2 border-white dark:border-gray-800 rounded-full"></span>
                             </div>
                             <div>
@@ -96,16 +110,29 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <details className="dropdown ">
-                                    <summary className="">Dashboard</summary>
-                                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded w-52">
-                                        <li><a>My Services</a></li>
-                                        <li><a>My Schedule</a></li>
+                                <details className="dropdown dark:text-white">
+                                    <summary className="list-none cursor-pointer flex items-center hover:text-[#05ac39]">
+                                        Dashboard<RiArrowDropDownLine className='text-lg'></RiArrowDropDownLine>
+                                    </summary>
+                                    <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-md w-52 dark:bg-gray-700 origin-left right-0 left-auto">
+                                        <li>
+                                            <NavLink to="/myServices" className='dark:hover:text-[#05ac39]'>
+                                                My Services
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink to="/mySchedule" className='dark:hover:text-[#05ac39]'>
+                                                My Schedule
+                                            </NavLink>
+                                        </li>
                                         <hr className='my-2' />
-                                        <li><a className='text-[#05ac39]'>Add Service</a></li>
+                                        <li>
+                                            <NavLink to="/addService" className='text-[#05ac39] dark:hover:text-white'>
+                                                Add Service
+                                            </NavLink>
+                                        </li>
                                     </ul>
                                 </details>
-
                             </li>
                         </ul>
                     </div>
