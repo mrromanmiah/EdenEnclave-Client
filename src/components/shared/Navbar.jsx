@@ -43,13 +43,13 @@ const Navbar = () => {
     return (
         <div>
 
-            <nav className="bg-white border-gray-200 dark:bg-gray-900 lg:px-14 md:px-10 px-3">
+            <nav className="bg-white  dark:bg-gray-900 lg:px-14 md:px-10 px-3">
                 <div className="lg:flex md:flex justify-between items-center mx-auto p-4 lg:space-y-0 md:space-y-0 space-y-3">
                     <a href="/" className="flex items-center">
                         <img src="https://i.ibb.co/bK8WP9x/favicon.png" className="h-10 mr-3" alt="EdenEnclave Logo" />
                         <div>
                         <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Eden<span className='text-[#05ac39]'>Enclave</span></h1>
-                        <p className='text-xs tracking-wider'>ELEVATE YOUR GREENERY</p>
+                        <p className='text-xs tracking-wider text-gray-400 dark:text-gray-400'>ELEVATE YOUR GREENERY</p>
                         </div>
 
                     </a>

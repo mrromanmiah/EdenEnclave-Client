@@ -10,8 +10,8 @@ const Banner = () => {
         <div>
             <Swiper
                 style={{
-                    '--swiper-navigation-color': '#fff',
-                    '--swiper-pagination-color': '#fff',
+                    '--swiper-navigation-color': '#05ac39',
+                    '--swiper-pagination-color': '#05ac39',
                 }}
                 speed={600}
                 parallax={true}
@@ -26,25 +26,22 @@ const Banner = () => {
                     slot="container-start"
                     className="parallax-bg"
                     style={{
-                        'background-image':
+                        'backgroundImage':
                             'url(https://i.ibb.co/t2Dn8vd/image-2.jpg)',
                     }}
                     data-swiper-parallax="-23%"
                 ></div>
                 <SwiperSlide>
                     <div className="flex flex-col items-center justify-center h-full text-center">
-                    <div className="lg:text-3xl md:text-xl text-lg font-bold text-[#05ac39]" data-swiper-parallax="-300">
-                        Slide 1
+                    <div className="lg:text-5xl md:text-3xl text-2xl font-bold text-[#05ac39]" data-swiper-parallax="-300">
+                    BlossomConnect
                     </div>
-                    <div className="lg:mb-3 md:mb-2 mb-1 lg:text-xl md:text-sm text-sm" data-swiper-parallax="-200">
-                        Subtitle
+                    <div className="lg:my-3 md:my-2 my-1 lg:text-xl md:text-lg text-base" data-swiper-parallax="-200">
+                    Cultivating Green Communities
                     </div>
-                    <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center" data-swiper-parallax="-100">
+                    <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center mx-auto" data-swiper-parallax="-100">
                         <p className='lg:text-sm md:text-xs text-xs'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                        Join BlossomConnect and discover a thriving network of passionate gardeners. Share your gardening journey, exchange tips, and watch your community bloom with vibrant colors and lush landscapes.
                         </p>
                     </div>
                     <button className="bg-[#05ac39] text-white lg:text-base md:text-sm text-xs font-bold rounded-md lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-[#05ac39] mt-4">Explore</button>
@@ -53,18 +50,15 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="flex flex-col items-center justify-center h-full text-center">
-                    <div className="lg:text-3xl md:text-xl text-lg font-bold text-[#05ac39]" data-swiper-parallax="-300">
-                        Slide 1
+                    <div className="lg:text-5xl md:text-3xl text-2xl font-bold text-[#05ac39]" data-swiper-parallax="-300">
+                    GreenThumb Hub
                     </div>
-                    <div className="lg:mb-3 md:mb-2 mb-1 lg:text-xl md:text-sm text-sm" data-swiper-parallax="-200">
-                        Subtitle
+                    <div className="lg:my-3 md:my-2 my-1 lg:text-xl md:text-lg text-base" data-swiper-parallax="-200">
+                    Your Gateway to Gardening Glory
                     </div>
-                    <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center" data-swiper-parallax="-100">
+                    <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center mx-auto" data-swiper-parallax="-100">
                         <p className='lg:text-sm md:text-xs text-xs'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                        Dive into the world of horticultural wonders with GreenThumb Hub. Connect with expert gardeners, access exclusive resources, and turn your backyard into a botanical masterpiece. Unearth the secrets to a flourishing garden today!
                         </p>
                     </div>
                     <button className="bg-[#05ac39] text-white lg:text-base md:text-sm text-xs font-bold rounded-md lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-[#05ac39] mt-4">Explore</button>
@@ -73,18 +67,15 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="flex flex-col items-center justify-center h-full text-center">
-                    <div className="lg:text-3xl md:text-xl text-lg font-bold text-[#05ac39]" data-swiper-parallax="-300">
-                        Slide 1
+                    <div className="lg:text-5xl md:text-3xl text-2xl font-bold text-[#05ac39]" data-swiper-parallax="-300">
+                    GardenGurus Collective
                     </div>
-                    <div className="lg:mb-3 md:mb-2 mb-1 lg:text-xl md:text-sm text-sm" data-swiper-parallax="-200">
-                        Subtitle
+                    <div className="lg:my-3 md:my-2 my-1 lg:text-xl md:text-lg text-base" data-swiper-parallax="-200">
+                    Growing Together, Growing Strong
                     </div>
-                    <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center" data-swiper-parallax="-100">
+                    <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center mx-auto" data-swiper-parallax="-100">
                         <p className='lg:text-sm md:text-xs text-xs'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                        Cultivate a sense of belonging with GardenGurus Collective. Share your gardening triumphs, seek advice from seasoned enthusiasts, and foster a community where every green dream takes root. Join us in sowing the seeds of a greener tomorrow.
                         </p>
                     </div>
                     <button className="bg-[#05ac39] text-white lg:text-base md:text-sm text-xs font-bold rounded-md lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-[#05ac39] mt-4">Explore</button>
