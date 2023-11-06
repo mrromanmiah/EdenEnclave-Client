@@ -36,7 +36,7 @@ const Banner = () => {
                     <div className="lg:text-5xl md:text-3xl text-2xl font-bold text-[#05ac39]" data-swiper-parallax="-300">
                     BlossomConnect
                     </div>
-                    <div className="lg:my-3 md:my-2 my-1 lg:text-xl md:text-lg text-base" data-swiper-parallax="-200">
+                    <div className="lg:my-3 md:my-2 my-1 lg:text-2xl md:text-lg text-base" data-swiper-parallax="-200">
                     Cultivating Green Communities
                     </div>
                     <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center mx-auto" data-swiper-parallax="-100">
@@ -53,7 +53,7 @@ const Banner = () => {
                     <div className="lg:text-5xl md:text-3xl text-2xl font-bold text-[#05ac39]" data-swiper-parallax="-300">
                     GreenThumb Hub
                     </div>
-                    <div className="lg:my-3 md:my-2 my-1 lg:text-xl md:text-lg text-base" data-swiper-parallax="-200">
+                    <div className="lg:my-3 md:my-2 my-1 lg:text-2xl md:text-lg text-base" data-swiper-parallax="-200">
                     Your Gateway to Gardening Glory
                     </div>
                     <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center mx-auto" data-swiper-parallax="-100">
@@ -70,7 +70,7 @@ const Banner = () => {
                     <div className="lg:text-5xl md:text-3xl text-2xl font-bold text-[#05ac39]" data-swiper-parallax="-300">
                     GardenGurus Collective
                     </div>
-                    <div className="lg:my-3 md:my-2 my-1 lg:text-xl md:text-lg text-base" data-swiper-parallax="-200">
+                    <div className="lg:my-3 md:my-2 my-1 lg:text-2xl md:text-lg text-base" data-swiper-parallax="-200">
                     Growing Together, Growing Strong
                     </div>
                     <div className="text lg:w-1/2 md:w-1/2 w-2/3 text-center mx-auto" data-swiper-parallax="-100">

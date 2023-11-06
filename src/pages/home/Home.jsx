@@ -1,7 +1,10 @@
 import Banner from "../../components/banner/Banner";
+import Contact from "../../components/contact/Contact";
 import Features from "../../components/features/Features";
 import Gardening from "../../components/gardening/Gardening";
-import Services from "../../components/services/Services";
+import LatestProjects from "../../components/latestProjects/LatestProjects";
+// import Services from "../../components/services/Services";
+import Statistics from "../../components/statistics/Statistics";
 
 
 const Home = () => {
@@ -10,7 +13,10 @@ const Home = () => {
             <Banner></Banner>
             <Features></Features>
             <Gardening></Gardening>
-            <Services></Services>
+            <Contact></Contact>
+            <Statistics></Statistics>
+            {/* <Services></Services> */}
+            <LatestProjects></LatestProjects>
         </div>
     );
 };
