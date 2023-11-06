@@ -44,7 +44,7 @@ const Banner = () => {
                         Join BlossomConnect and discover a thriving network of passionate gardeners. Share your gardening journey, exchange tips, and watch your community bloom with vibrant colors and lush landscapes.
                         </p>
                     </div>
-                    <button className="bg-[#05ac39] text-white lg:text-base md:text-sm text-xs font-bold rounded-md lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-[#05ac39] mt-4">Explore</button>
+                    <button className="bg-[#05ac39] text-white text-sm rounded-full lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-black mt-4">Explore</button>
                     </div>
                     
                 </SwiperSlide>
@@ -61,7 +61,7 @@ const Banner = () => {
                         Dive into the world of horticultural wonders with GreenThumb Hub. Connect with expert gardeners, access exclusive resources, and turn your backyard into a botanical masterpiece. Unearth the secrets to a flourishing garden today!
                         </p>
                     </div>
-                    <button className="bg-[#05ac39] text-white lg:text-base md:text-sm text-xs font-bold rounded-md lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-[#05ac39] mt-4">Explore</button>
+                    <button className="bg-[#05ac39] text-white text-sm rounded-full lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-black mt-4">Explore</button>
                     </div>
                     
                 </SwiperSlide>
@@ -78,7 +78,7 @@ const Banner = () => {
                         Cultivate a sense of belonging with GardenGurus Collective. Share your gardening triumphs, seek advice from seasoned enthusiasts, and foster a community where every green dream takes root. Join us in sowing the seeds of a greener tomorrow.
                         </p>
                     </div>
-                    <button className="bg-[#05ac39] text-white lg:text-base md:text-sm text-xs font-bold rounded-md lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-[#05ac39] mt-4">Explore</button>
+                    <button className="bg-[#05ac39] text-white text-sm rounded-full lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-black mt-4">Explore</button>
                     </div>
                     
                 </SwiperSlide>             

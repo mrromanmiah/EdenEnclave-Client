@@ -64,7 +64,7 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className='flex items-center gap-3'>
-                            <Link to='/login'><button className="bg-[#05ac39] text-white font-bold rounded-md lg:px-4 md:px-2 px-2 lg:py-1 md:py-1 py-1 hover:bg-gray-300 hover:text-[#05ac39] ">Login</button></Link>
+                            <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-medium rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Login</button></Link>
                             <button onClick={changeTheme} className="bg-[#05ac39] text-white dark:bg-white dark:text-black px-2 py-2 rounded-full font-medium">
                                 {
                                     mode === "dark" ? <BsFillSunFill></BsFillSunFill> : <BsFillMoonFill></BsFillMoonFill>
