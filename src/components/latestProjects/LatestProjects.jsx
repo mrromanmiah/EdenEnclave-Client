@@ -22,7 +22,7 @@ const LatestProjects = () => {
 
 
 
-            <div className='mt-10'>
+            <div className=''>
                 <Swiper
                 
                     autoplay={{
