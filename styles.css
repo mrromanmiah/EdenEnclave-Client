@@ -43,10 +43,14 @@
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(to bottom, black, #02250e, #036424);
-
+    background: white;
   }
   
+  .dark .swiper {
+    background: #00160c;
+    
+}
+
   .swiper-slide {
     background-position: center;
     background-size: cover;

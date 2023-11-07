@@ -5,6 +5,7 @@ import Gardening from "../../components/gardening/Gardening";
 import LatestProjects from "../../components/latestProjects/LatestProjects";
 // import Services from "../../components/services/Services";
 import Statistics from "../../components/statistics/Statistics";
+import Testimonial from "../../components/testimonial/Testimonial";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Statistics></Statistics>
             {/* <Services></Services> */}
             <LatestProjects></LatestProjects>
+            <Testimonial></Testimonial>
         </div>
     );
 };

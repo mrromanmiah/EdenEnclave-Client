@@ -43,7 +43,7 @@ const Navbar = () => {
     return (
         <div>
 
-            <nav className="bg-white  dark:bg-gray-900 lg:px-14 md:px-10 px-3">
+            <nav className="bg-white  dark:bg-[#00160c] lg:px-14 md:px-10 px-3">
                 <div className="lg:flex md:flex justify-between items-center mx-auto p-4 lg:space-y-0 md:space-y-0 space-y-3">
                     <a href="/" className="flex items-center">
                         <img src="https://i.ibb.co/bK8WP9x/favicon.png" className="h-10 mr-3" alt="EdenEnclave Logo" />
@@ -75,7 +75,7 @@ const Navbar = () => {
 
                 </div>
             </nav>
-            <nav className="bg-gray-50 dark:bg-gray-700 lg:px-14 md:px-10 px-3">
+            <nav className="bg-gray-100 dark:bg-[#003c20] lg:px-14 md:px-10 px-3">
                 <div className="max-w-screen-xl px-4 py-3 mx-auto">
                     <div className="flex items-center">
                         <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
