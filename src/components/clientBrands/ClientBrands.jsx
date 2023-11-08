@@ -12,7 +12,7 @@ const ClientBrands = () => {
     };
     return (
         
-                <Slider {...settings} className="bg-[#05ac39] py-14 px-40 mt-14">
+                <Slider {...settings} className="bg-[#05ac39] py-14 px-10 md:px-20 lg:px-40 overflow-hidden mt-14">
                     
                     <div>
                         <img className="w-1/2 object-cover" src="https://i.ibb.co/Gtxm1V1/Logo1.png" alt="" />
