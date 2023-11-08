@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext)
@@ -34,7 +35,6 @@ const Navbar = () => {
 
     document.addEventListener('click', function (event) {
         const dropdown = document.querySelector('.dropdown');
-
         if (!dropdown.contains(event.target)) {
             dropdown.removeAttribute('open');
         }
@@ -43,7 +43,11 @@ const Navbar = () => {
     const handleSignOut = () => {
         signOutUser()
             .then(() => {
-                console.log("Logged Out");
+                Swal.fire(
+                    'Good job!',
+                    'Successfully logged out',
+                    'success'
+                )
             })
             .catch(error => {
                 console.error(error);
