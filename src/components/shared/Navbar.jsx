@@ -2,9 +2,11 @@ import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
-
+    const { user, signOutUser } = useContext(AuthContext)
     const [mode, setMode] = useState("light")
 
     function changeTheme() {
@@ -38,6 +40,15 @@ const Navbar = () => {
         }
     });
 
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                console.log("Logged Out");
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
 
 
     return (
@@ -53,22 +64,31 @@ const Navbar = () => {
                         </div>
                     </a>
                     <div className="flex items-center gap-4">
-                        <div className='flex items-center gap-4'>
+                        {
+                            user ? <div className='flex items-center gap-4'>
                             <div className="relative">
-                                <img className="w-10 h-10 rounded-full" src={"https://i.ibb.co/JKgdVyn/27470334-7309681.jpg"} alt="" />
+                                <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
                                 <span className="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-[#05ac39] border-2 border-white dark:border-gray-800 rounded-full"></span>
                             </div>
                             <div>
-                                <p className='text-xs font-bold dark:text-white'>Sakir Ahmed Roman</p>
+                                <p className='text-xs font-bold dark:text-white'>{user.displayName}</p>
                             </div>
+                            <button onClick={handleSignOut} className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-medium rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Logout</button>
                         </div>
+                        :
+                        <div>
+                        <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-medium rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Login</button></Link>
+                        </div>
+                        }
                         <div className='flex items-center gap-3'>
-                            <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-medium rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Login</button></Link>
-                            <button onClick={changeTheme} className="bg-[#05ac39] text-white dark:bg-white dark:text-black px-2 py-2 rounded-full font-medium">
+                            
+                            <div>
+                                <button onClick={changeTheme} className="bg-[#05ac39] text-white dark:bg-white dark:text-black px-2 py-2 rounded-full font-medium">
                                 {
                                     mode === "dark" ? <BsFillSunFill></BsFillSunFill> : <BsFillMoonFill></BsFillMoonFill>
                                 }
                             </button>
+                            </div>
                         </div>
                     </div>
 
@@ -108,7 +128,9 @@ const Navbar = () => {
                                     Services
                                 </NavLink>
                             </li>
-                            <li>
+                            { user &&
+                                <>
+                                <li>
                                 <details className="dropdown dark:text-white">
                                     <summary className="list-none cursor-pointer flex items-center hover:text-[#05ac39]">
                                         Dashboard<RiArrowDropDownLine className='text-lg'></RiArrowDropDownLine>
@@ -133,6 +155,8 @@ const Navbar = () => {
                                     </ul>
                                 </details>
                             </li>
+                                </>
+                            }
                         </ul>
                     </div>
                 </div>
