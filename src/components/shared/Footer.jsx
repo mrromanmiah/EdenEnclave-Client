@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="px-20 divide-y bg-black text-white">
+        <footer className="lg:px-20 md:px-10 px-5 divide-y bg-black text-white">
             <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a href="/" className="flex items-center">
@@ -69,9 +69,9 @@ const Footer = () => {
                     </div>
                     <div className="space-y-6">
 
-                        <div className="flex flex-col justify-center items-center">
+                        <div className="flex flex-col justify-start">
                             <h4 className="font-semibold text-[#05ac39]">Download APP</h4>
-                            <img className="w-28" src="https://i.ibb.co/Jtw5y3W/pngwing-com-6.png" alt="" />
+                            <img className="w-28" src="https://i.ibb.co/z4qBFWY/pngwing-com-copy.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
 
             </div>
-            <div className=" flex justify-between py-6 text-xs dark:text-gray-400">
+            <div className="flex justify-between py-6 lg:gap-0 md:gap-0 gap-6 text-xs dark:text-gray-400">
                 <p>© 2023 EdenEnclave. Designed By Roman.</p>
                 <ul className="flex gap-6">
                     <li className="cursor-pointer hover:text-[#05ac39]">Sitemap</li>
