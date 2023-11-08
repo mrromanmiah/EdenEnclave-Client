@@ -19,10 +19,7 @@ const LatestProjects = () => {
                 <p className="text-xs dark:text-white">Check out our latest projects where we've transformed ordinary spaces into lush paradises. From vibrant flower beds to serene landscapes, our gardening experts bring dreams to bloom. Explore the beauty we've sown, one garden at a time.</p>
             </div>
 
-
-
-
-            <div className=''>
+            <div>
                 <Swiper
                 
                     autoplay={{
