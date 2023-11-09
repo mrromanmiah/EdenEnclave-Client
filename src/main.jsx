@@ -12,6 +12,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import AuthProvider from './providers/AuthProvider';
+import AllServices from './pages/allServices/AllServices';
+import MyServices from './pages/myServices/MyServices';
+import MySchedule from './pages/mySchedule/MySchedule';
+import AddService from './pages/addService/AddService';
 
 
 
@@ -38,7 +42,24 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About></About>
-      }
+      },
+      {
+        path: '/services',
+        element: <AllServices></AllServices>
+      },
+      {
+        path: '/myServices',
+        element: <MyServices></MyServices>
+      },
+      {
+        path: '/mySchedule',
+        element: <MySchedule></MySchedule>
+      },
+      {
+        path: '/addService',
+        element: <AddService></AddService>
+      },
+
     ]
   }
 ])

@@ -13,7 +13,7 @@ const Footer = () => {
                             <p className='text-xs tracking-wider text-gray-400 dark:text-gray-400'>ELEVATE YOUR GREENERY</p>
                         </div>
                     </a>
-                    <p className="text-xs font-light mt-4 lg:w-64">Where gardens meet generosity, cultivating a community of shared growth and flourishing landscapes. Your journey to a greener world starts here, rooted in connection and blooming with collaborative care.</p>
+                    <p className="text-xs font-light mt-4 lg:w-64">Your journey to a greener world starts here, rooted in connection and blooming with collaborative care.</p>
                     <h3 className="mt-4 mb-2 font-semibold text-[#05ac39]">Social Media</h3>
                     <div className="flex gap-2">
                         <button className="rounded-full bg-[#05ac39] p-2 hover:bg-white hover:text-[#05ac39] text-xs"><FaFacebookF></FaFacebookF></button>
@@ -75,10 +75,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
             <div className="flex justify-between py-6 lg:gap-0 md:gap-0 gap-6 text-xs dark:text-gray-400">
                 <p>© 2023 EdenEnclave. Designed By Roman.</p>

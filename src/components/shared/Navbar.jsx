@@ -40,6 +40,11 @@ const Navbar = () => {
         }
     });
 
+    const closeDropdown = () => {
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.removeAttribute('open');
+    };
+
     const handleSignOut = () => {
         signOutUser()
             .then(() => {
@@ -77,11 +82,11 @@ const Navbar = () => {
                             <div>
                                 <p className='text-xs font-bold dark:text-white'>{user.displayName}</p>
                             </div>
-                            <button onClick={handleSignOut} className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-medium rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Logout</button>
+                            <button onClick={handleSignOut} className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-bold rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black fon">Logout</button>
                         </div>
                         :
                         <div>
-                        <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-medium rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Login</button></Link>
+                        <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-bold rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Login</button></Link>
                         </div>
                         }
                         <div className='flex items-center gap-3'>
@@ -141,18 +146,18 @@ const Navbar = () => {
                                     </summary>
                                     <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-md w-52 dark:bg-gray-700 origin-left right-0 left-auto">
                                         <li>
-                                            <NavLink to="/myServices" className='dark:hover:text-[#05ac39]'>
+                                            <NavLink to="/myServices" className='dark:hover:text-[#05ac39]' onClick={closeDropdown}>
                                                 My Services
                                             </NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/mySchedule" className='dark:hover:text-[#05ac39]'>
+                                            <NavLink to="/mySchedule" className='dark:hover:text-[#05ac39]' onClick={closeDropdown}>
                                                 My Schedule
                                             </NavLink>
                                         </li>
                                         <hr className='my-2' />
                                         <li>
-                                            <NavLink to="/addService" className='text-[#05ac39] dark:hover:text-white'>
+                                            <NavLink to="/addService" className='text-[#05ac39] dark:hover:text-white' onClick={closeDropdown}>
                                                 Add Service
                                             </NavLink>
                                         </li>
