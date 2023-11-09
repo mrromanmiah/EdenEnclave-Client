@@ -68,26 +68,28 @@ const Register = () => {
     }
     return (
         <div className="dark:bg-[#00160c]">
-            <div className="px-20 text-center pt-10 mb-10">
-                <h1 className="text-3xl text-[#05ac39] font-extrabold ">Register</h1>
+             <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto pt-8 pb-8">
+                <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Join the Adventure</p>
+                <h1 className="text-3xl font-semibold dark:text-white">Register</h1>
+                <p className="text-xs dark:text-white">Embark on a new chapter by setting up your account. Experience a hassle-free registration process, where your details become the key to unlocking a realm of possibilities. Start your journey with us today!</p>
             </div>
-            <form onSubmit={handleRegister} className="space-y-3 mb-10">
+            <form onSubmit={handleRegister} className="space-y-4 mb-10">
                 <div className="text-center text-sm space-y-2">
-                    <h3 className="font-bold dark:text-white">Name<span className="text-[#d82148]">*</span></h3>
-                    <input className="rounded-md border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="text" name="displayName" id="" placeholder="Your name"/>
+                    
+                    <input className="rounded-full border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="text" name="displayName" id="" placeholder="Your name"/>
                 </div>
                 <div className="text-center space-y-2">
-                    <h3 className="font-bold dark:text-white">E-mail<span className="text-[#d82148]">*</span></h3>
-                    <input className="rounded-md border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="email" name="email" id="" placeholder="Your email" required />
+                    
+                    <input className="rounded-full border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="email" name="email" id="" placeholder="Your email" required />
                 </div>
                 <div className="text-center space-y-2">
-                    <h3 className="font-bold dark:text-white">Photo URL</h3>
-                    <input className="rounded-md border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="url" name="photoURL" id="" placeholder="Your photo URL" />
+                    
+                    <input className="rounded-full border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="url" name="photoURL" id="" placeholder="Your photo URL" />
                 </div>
                 <div className="text-center space-y-2">
-                    <h3 className="font-bold dark:text-white">Password<span className="text-[#d82148]">*</span></h3>
+                   
                     <div className="relative">
-                        <input className="rounded-md border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type={showPassword ? "text" : "password"} name="password" id="" placeholder="Password" required />
+                        <input className="rounded-full border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type={showPassword ? "text" : "password"} name="password" id="" placeholder="Password" required />
                         <span className="absolute top-4 -ml-10" onClick={() => setShowPassword(!showPassword)}>
                             {
                                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>

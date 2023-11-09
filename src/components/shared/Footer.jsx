@@ -3,8 +3,8 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="lg:px-20 md:px-10 px-5 divide-y bg-black text-white">
-            <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+        <footer className="divide-y bg-black text-white">
+            <div className="lg:px-20 md:px-10 px-5 container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a href="/" className="flex items-center">
                         <img src="https://i.ibb.co/bK8WP9x/favicon.png" className="h-12 mr-3" alt="EdenEnclave Logo" />
@@ -76,10 +76,10 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between py-6 lg:gap-0 md:gap-0 gap-6 text-xs dark:text-gray-400">
+            <div className="lg:px-20 md:px-10 px-5  flex justify-between py-6 lg:gap-0 md:gap-0 gap-6 text-xs dark:text-gray-400 bg-[#00160c]">
                 <p>© 2023 EdenEnclave. Designed By Roman.</p>
                 <ul className="flex gap-6">
-                    <li className="cursor-pointer hover:text-[#05ac39]">Sitemap</li>
+                    <li className="cursor-pointer hover:text-[#05ac39]">Site Index</li>
                     <li className="cursor-pointer hover:text-[#05ac39]">Privacy Policy</li>
                     <li className="cursor-pointer hover:text-[#05ac39]">Terms of Use</li>
                 </ul>

@@ -85,18 +85,20 @@ const Login = () => {
 
     return (
         <div className="dark:bg-[#00160c]">
-            <div className="px-20 text-center pt-10 mb-10">
-                <h1 className="text-3xl text-[#05ac39] font-extrabold">Login</h1>
+            <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto pt-8 pb-8">
+                <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Unlock Your Realm</p>
+                <h1 className="text-3xl font-semibold dark:text-white">Login</h1>
+                <p className="text-xs dark:text-white">Seamlessly access your personalized universe by simply entering your credentials. Your journey begins with a secure login—where every click opens the door to a world tailored just for you.</p>
             </div>
             <form onSubmit={handleLogin} className="space-y-4 mb-6 ">
                 <div className="text-center space-y-2">
-                    <h3 className="font-bold dark:text-white">E-mail<span className="text-[#d82148]">*</span></h3>
-                    <input className="rounded-md border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="email" name="email" id="email" placeholder="E-mail" required />
+                   
+                    <input className="rounded-full border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type="email" name="email" id="email" placeholder="E-mail" required />
                 </div>
-                <div className="text-center space-y-2">
-                    <h3 className="font-bold dark:text-white">Password<span className="text-[#d82148]">*</span></h3>
+                <div className="text-center space-y-4">
+                   
                     <div className="relative">
-                        <input className="rounded-md border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Password" required />
+                        <input className="rounded-full border-2 py-2 px-6 lg:w-1/3 focus:border-[#05ac39]" type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Password" required />
                         <span className="absolute top-4 -ml-10" onClick={() => setShowPassword(!showPassword)}>
                             {
                                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
@@ -108,10 +110,10 @@ const Login = () => {
             </form>
 
 
-            <div className="divider w-1/3 flex justify-center mx-auto font-medium">OR</div>
+            <div className="divider w-1/3 flex justify-center mx-auto font-medium dark:text-gray-600">OR</div>
 
 
-            <div className="space-y-4 pb-20">
+            <div className="space-y-2 pb-20">
                 <button onClick={handleGoogleLogin} className="btn btn-circle p-1 flex items-center mx-auto"><img src={'https://i.ibb.co/vVdgSTt/google-1.png'} alt="" /></button>
                 <p className="text-center dark:text-white">Don't have an account? <Link className="text-[#05ac39] font-bold hover:underline" to='/register'>Register</Link></p>
             </div>
