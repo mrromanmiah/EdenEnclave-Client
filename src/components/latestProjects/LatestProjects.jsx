@@ -1,18 +1,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import '/styles.css';
-
-// import required modules
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
 const LatestProjects = () => {
     return (
-        <div className='mt-14'>
+        <div className='mt-14 lg:mx-40'>
             <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto">
                 <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Latest Projects</p>
                 <h1 className="text-3xl font-semibold dark:text-white">Complete Projects</h1>
@@ -27,6 +22,7 @@ const LatestProjects = () => {
                         disableOnInteraction: false,
                     }}
                     effect={'coverflow'}
+                    loop={true}
                     grabCursor={true}
                     centeredSlides={true}
                     slidesPerView={'auto'}
