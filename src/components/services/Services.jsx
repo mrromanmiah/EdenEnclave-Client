@@ -1,7 +1,18 @@
+import { useState } from "react";
 import ServiceCard from "./ServiceCard";
+import { useEffect } from "react";
+
 
 
 const Services = () => {
+    const [services, setServices] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/coreServices')
+        .then(res => res.json())
+        .then(data => setServices(data))
+    },[])
+
     return (
         <div>
 <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto mt-14">
@@ -10,9 +21,16 @@ const Services = () => {
                 <p className="text-xs dark:text-white">Discover the heart of our green haven from expert garden design and care, we nurture your outdoor space with passion and precision. Explore a spectrum of services that cultivate the beauty of nature right at your doorstep.</p>
             </div>
 
-            <div>
-                <ServiceCard></ServiceCard>
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:mx-40 md:mx-10 mx-5 gap-10 mt-14">
+                {
+                    services?.slice(0, 4).map(service => <ServiceCard 
+                    key={service._id}
+                    service={service}
+                    ></ServiceCard>)
+                }
             </div>
+
+            <button className="bg-[#05ac39] text-white flex justify-center mx-auto mt-14 text-sm rounded-full lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-black">See All Services</button>
         </div>
     );
 };
