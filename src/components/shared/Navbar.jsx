@@ -82,11 +82,11 @@ const Navbar = () => {
                             <div>
                                 <p className='text-xs font-bold dark:text-white'>{user.displayName}</p>
                             </div>
-                            <button onClick={handleSignOut} className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-bold rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black fon">Logout</button>
+                            <button onClick={handleSignOut} className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-bold rounded-full px-4 py-2  hover:bg-gray-300 hover:text-black fon">Logout</button>
                         </div>
                         :
                         <div>
-                        <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-bold rounded-full lg:px-4 md:px-3 px-2 lg:py-2 md:py-1 py-1 hover:bg-gray-300 hover:text-black ">Login</button></Link>
+                        <Link to='/login'><button className="bg-[#05ac39] text-white lg:text-sm md:text-sm text-xs font-bold rounded-full px-4 py-2  hover:bg-gray-300 hover:text-black ">Login</button></Link>
                         </div>
                         }
                         <div className='flex items-center gap-3'>

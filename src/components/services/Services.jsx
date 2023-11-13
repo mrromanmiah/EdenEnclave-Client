@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -8,14 +9,14 @@ const Services = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/coreServices')
+        fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
 
     return (
         <div>
-<div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto mt-14">
+<div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto mt-14">
                 <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Core Services</p>
                 <h1 className="text-3xl font-semibold dark:text-white">Our Core Services</h1>
                 <p className="text-xs dark:text-white">Discover the heart of our green haven from expert garden design and care, we nurture your outdoor space with passion and precision. Explore a spectrum of services that cultivate the beauty of nature right at your doorstep.</p>
@@ -29,8 +30,9 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
-
-            <button className="bg-[#05ac39] text-white flex justify-center mx-auto mt-14 text-sm rounded-full lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-black">See All Services</button>
+            <Link to='/services'>
+            <button className="bg-[#05ac39] text-white flex justify-center mx-auto mt-14 text-sm rounded-full px-6 py-3 hover:bg-gray-300 hover:text-black">See All Services</button>
+            </Link>
         </div>
     );
 };

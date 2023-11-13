@@ -30,7 +30,7 @@ const ServiceCard = ({ service }) => {
                     <h1 className="text-2xl text-[#05ac39] font-semibold">{ServiceName}</h1>
                     <p className="text-gray-500 text-sm dark:text-white mb-4">{ServiceDescription}</p>
                 </div>
-                <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl lg:px-6 md:px-4 px-2 lg:py-3 md:py-2 py-1 hover:bg-gray-300 hover:text-black mt-4">Details</button>
+                <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-3 hover:bg-gray-300 hover:text-black mt-4">Details</button>
             </div>
         </div>
     );

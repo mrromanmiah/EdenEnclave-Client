@@ -85,7 +85,7 @@ const Login = () => {
 
     return (
         <div className="dark:bg-[#00160c]">
-            <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto pt-8 pb-8">
+            <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto pt-8 pb-8">
                 <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Unlock Your Realm</p>
                 <h1 className="text-3xl font-semibold dark:text-white">Login</h1>
                 <p className="text-xs dark:text-white">Seamlessly access your personalized universe by simply entering your credentials. Your journey begins with a secure login—where every click opens the door to a world tailored just for you.</p>

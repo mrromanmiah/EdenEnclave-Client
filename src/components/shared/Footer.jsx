@@ -77,7 +77,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="lg:px-20 md:px-10 px-5  flex justify-between py-6 lg:gap-0 md:gap-0 gap-6 text-xs dark:text-gray-400 bg-[#00160c]">
-                <p>© 2023 EdenEnclave. Designed By Roman.</p>
+                <p>© 2023 EdenEnclave. Designed By Roman</p>
                 <ul className="flex gap-6">
                     <li className="cursor-pointer hover:text-[#05ac39]">Site Index</li>
                     <li className="cursor-pointer hover:text-[#05ac39]">Privacy Policy</li>

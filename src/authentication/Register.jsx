@@ -68,8 +68,8 @@ const Register = () => {
     }
     return (
         <div className="dark:bg-[#00160c]">
-             <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto pt-8 pb-8">
-                <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Join the Adventure</p>
+             <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto pt-8 pb-8">
+                <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Join the Green</p>
                 <h1 className="text-3xl font-semibold dark:text-white">Register</h1>
                 <p className="text-xs dark:text-white">Embark on a new chapter by setting up your account. Experience a hassle-free registration process, where your details become the key to unlocking a realm of possibilities. Start your journey with us today!</p>
             </div>

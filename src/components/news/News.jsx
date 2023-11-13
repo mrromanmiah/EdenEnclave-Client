@@ -3,7 +3,7 @@ import { MdDateRange } from "react-icons/md";
 const News = () => {
     return (
         <div className='mt-14'>
-            <div className="space-y-2 text-center w-1/2 flex flex-col justify-center mx-auto">
+            <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto">
                 <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Latest News & Blog</p>
                 <h1 className="text-3xl font-semibold dark:text-white">Latest News Post & Articles</h1>
                 <p className="text-xs dark:text-white">Dive into our Latest News and Articles for a green journey filled with gardening tips, plant care wisdom, and landscaping inspiration. Stay in the loop with trends, expert advice, and captivating stories that nurture your passion for all things botanical.</p>
