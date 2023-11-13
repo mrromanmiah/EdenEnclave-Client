@@ -2,7 +2,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { ImPriceTag } from "react-icons/im";
 
 
-const AllServicesCard = ({ allService }) => {
+const AllServicesCard = ({ service }) => {
     const {
         ServiceImage,
         ServiceName,
@@ -12,7 +12,7 @@ const AllServicesCard = ({ allService }) => {
         ServiceProviderName,
         ServiceProviderLocation
 
-    } = allService || {};
+    } = service || {};
 
 
 

@@ -7,6 +7,7 @@ const AllServices = () => {
 
     const [allServices, setAllServices] = useState([])
     const [dataLength, setDataLength] = useState(6);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -14,6 +15,9 @@ const AllServices = () => {
             .then(data => setAllServices(data))
     }, [])
 
+    const filteredServices = allServices.filter((service) =>
+        service.ServiceName.toLowerCase().includes(search.toLowerCase())
+    );
 
     return (
         <div className="mb-14">
@@ -24,19 +28,20 @@ const AllServices = () => {
             </div>
 
             <div className="flex justify-center mx-auto mt-14">
-                <input className="rounded-full text-center border-[#05ac39] border-2" type="search" name="search" placeholder="Search by Name" id="" />
+                <input className="rounded-full text-center border-[#05ac39] border-2" type="search" name="search" placeholder="Search by Name" id="" value={search}
+                    onChange={(e) => setSearch(e.target.value)} />
             </div>
 
             <div className="grid grid-cols-1 lg:mx-40 md:mx-10 mx-5 gap-10 mt-7">
                 {
-                    allServices?.slice(0, dataLength).map(allService => <AllServicesCard key={allService._id}
-                        allService={allService}></AllServicesCard>)
+                    filteredServices?.slice(0, dataLength).map(service => <AllServicesCard key={service._id}
+                        service={service}></AllServicesCard>)
                 }
             </div>
 
-            {allServices.length > 6 && dataLength < allServices.length && (
+            {filteredServices.length > 6 && dataLength < filteredServices.length && (
                 <div>
-                    <button onClick={() => setDataLength(allServices.length)} className="bg-[#05ac39] text-white flex justify-center mx-auto my-14 text-sm rounded-full px-6 py-3 hover:bg-gray-300 hover:text-black">See More</button>
+                    <button onClick={() => setDataLength(filteredServices.length)} className="bg-[#05ac39] text-white flex justify-center mx-auto my-14 text-sm rounded-full px-6 py-3 hover:bg-gray-300 hover:text-black">See More</button>
                 </div>
             )}
         </div>
