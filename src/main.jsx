@@ -56,15 +56,15 @@ const router = createBrowserRouter([
       },
       {
         path: '/myServices',
-        element: <MyServices></MyServices>
+        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
       },
       {
         path: '/mySchedule',
-        element: <MySchedule></MySchedule>
+        element: <PrivateRoute><MySchedule></MySchedule></PrivateRoute>
       },
       {
         path: '/addService',
-        element: <AddService></AddService>
+        element: <PrivateRoute><AddService></AddService></PrivateRoute>
       },
 
     ]

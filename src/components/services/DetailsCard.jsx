@@ -3,6 +3,7 @@ import { BsFillBookmarkPlusFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 import { ImPriceTag } from "react-icons/im";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const DetailsCard = ({ details }) => {
     const { user } = useContext(AuthContext)
@@ -15,6 +16,48 @@ const DetailsCard = ({ details }) => {
         ServiceProviderLocation,
         ServiceProviderEmail,
         ShortDescription } = details || {};
+
+        const handleBookings = event => {
+            event.preventDefault();
+            const form = event.target;
+
+            const ServiceName = form.ServiceName.value;
+            const ServiceImage = form.ServiceImage.value;
+            const ServiceProviderEmail = form.ServiceProviderEmail.value;
+            const UserEmail = form.UserEmail.value;
+            const ServicePrice = form.ServicePrice.value;
+            const ServiceDate = form.ServiceDate.value;
+            const Instructions = form.Instructions.value;
+
+            const bookedService = {ServiceName, ServiceImage, ServiceProviderEmail, UserEmail, ServicePrice, ServiceDate, Instructions}
+
+            fetch ('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(bookedService)
+            })
+            .then (res => res.json())
+            .then (data => {
+                if(data.insertedId) {
+                    Swal.fire(
+                        'Good job!',
+                        'You have added the service successfully!',
+                        'success'
+                      )
+                }
+            })
+
+
+
+            const modal = document.getElementById('my_modal_3');
+            modal.close();
+
+        }
+
+
+
 
 
     return (
@@ -32,7 +75,7 @@ const DetailsCard = ({ details }) => {
 
 
 
-            <form method="dialog" className="lg:w-2/3 md:w-2/3 w-full">
+            <div method="dialog" className="lg:w-2/3 md:w-2/3 w-full">
                 <div className="lg:flex items-center gap-8 p-8 border-2 rounded-3xl shadow-2xl dark:shadow-2xl dark:shadow-[#05ac39] overflow-hidden">
                     <img className="lg:w-1/2 rounded-3xl overflow-hidden" src={ServiceImage} alt="" />
                     <div className="lg:w-1/2 lg:mt-0 md:mt-6 mt-6 space-y-4">
@@ -48,7 +91,9 @@ const DetailsCard = ({ details }) => {
                         <button onClick={() => document.getElementById('my_modal_3').showModal()} className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center">Book Service <BsFillBookmarkPlusFill></BsFillBookmarkPlusFill> </button>
 
                         <dialog id="my_modal_3" className="modal">
-                            <div className="modal-box">
+
+
+                            <form onSubmit={handleBookings} className="modal-box">
                                 <form method="dialog">
                                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                 </form>
@@ -70,7 +115,7 @@ const DetailsCard = ({ details }) => {
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">User E-mail</p>
-                                    <input className="w-full rounded-lg" type="email" name="userEmail" id="" value={user.email} readOnly />
+                                    <input className="w-full rounded-lg" type="email" name="UserEmail" id="" value={user.email} readOnly />
                                 </div>
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">Service Price</p>
@@ -86,14 +131,14 @@ const DetailsCard = ({ details }) => {
                                 </div>
                                 </div>
 
-                                <form method="dialog" className="modal-action">
-                                    <input className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center" method="dialog" type="submit" value="Book Now" />
-                                </form>
-                            </div>
+                                
+                                    <input className="modal-action bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center" method="dialog" type="submit" value="Book Now" />
+                                
+                            </form>
                         </dialog>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     );
 };
