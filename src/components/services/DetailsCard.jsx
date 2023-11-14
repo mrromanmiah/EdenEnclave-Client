@@ -1,10 +1,11 @@
+import { useContext } from "react";
 import { BsFillBookmarkPlusFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 import { ImPriceTag } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const DetailsCard = ({ details }) => {
-
+    const { user } = useContext(AuthContext)
     const { ServiceImage,
         ServiceName,
         ServiceDescription,
@@ -12,12 +13,13 @@ const DetailsCard = ({ details }) => {
         ServiceProviderImage,
         ServiceProviderName,
         ServiceProviderLocation,
+        ServiceProviderEmail,
         ShortDescription } = details || {};
 
 
     return (
         <div className="lg:flex md:flex flex-none gap-6">
-            <div className="lg:w-1/3 md:w-1/2 w-full lg:mb-0 md:mb-0 mb-6"> 
+            <div className="lg:w-1/3 md:w-1/2 w-full lg:mb-0 md:mb-0 mb-6">
                 <div className="flex items-center gap-3  p-5 border-2 rounded-3xl dark:text-white">
                     <img className="w-32 rounded-lg overflow-hidden" src={ServiceProviderImage} alt="" />
                     <div className="space-y-1">
@@ -29,7 +31,8 @@ const DetailsCard = ({ details }) => {
             </div>
 
 
-            <div className="lg:w-2/3 md:w-2/3 w-full">
+
+            <form method="dialog" className="lg:w-2/3 md:w-2/3 w-full">
                 <div className="lg:flex items-center gap-8 p-8 border-2 rounded-3xl shadow-2xl dark:shadow-2xl dark:shadow-[#05ac39] overflow-hidden">
                     <img className="lg:w-1/2 rounded-3xl overflow-hidden" src={ServiceImage} alt="" />
                     <div className="lg:w-1/2 lg:mt-0 md:mt-6 mt-6 space-y-4">
@@ -42,26 +45,55 @@ const DetailsCard = ({ details }) => {
                             </div>
                             <p className="flex items-center gap-2 text-gray-500 text-xl font-semibold dark:text-white"><ImPriceTag></ImPriceTag> ${ServicePrice}.00</p>
                         </div>
-                        <Link>
-                            <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center">Book Now <BsFillBookmarkPlusFill></BsFillBookmarkPlusFill> </button>
-                        </Link>
+                        <button onClick={() => document.getElementById('my_modal_3').showModal()} className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center">Book Service <BsFillBookmarkPlusFill></BsFillBookmarkPlusFill> </button>
+
+                        <dialog id="my_modal_3" className="modal">
+                            <div className="modal-box">
+                                <form method="dialog">
+                                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                </form>
+                                <h3 className="font-bold text-lg mb-2 text-[#05ac39]">Please fill in the required fields.</h3>
+
+                                <div className="space-y-3">
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">Service Name</p>
+                                    <input className="w-full rounded-lg" type="text" name="ServiceName" id="" value={ServiceName} readOnly />
+                                </div>
+
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">Service Image</p>
+                                    <input className="w-full rounded-lg" type="url" name="ServiceImage" id="" value={ServiceImage} readOnly />
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">Service Provider E-mail</p>
+                                    <input className="w-full rounded-lg" type="email" name="ServiceProviderEmail" id="" value={ServiceProviderEmail} readOnly />
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">User E-mail</p>
+                                    <input className="w-full rounded-lg" type="email" name="userEmail" id="" value={user.email} readOnly />
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">Service Price</p>
+                                    <input className="w-full rounded-lg" type="number" name="ServicePrice" id="" value={ServicePrice} readOnly />
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">Service Taking Date</p>
+                                    <input className="w-full rounded-lg border-2 border-[#05ac39]" type="date" name="ServiceDate" id="" />
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold">Special Instructions</p>
+                                    <input className="w-full rounded-lg border-2 border-[#05ac39]" type="text" name="Instructions" id="" placeholder="Give any instruction" />
+                                </div>
+                                </div>
+
+                                <form method="dialog" className="modal-action">
+                                    <input className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center" method="dialog" type="submit" value="Book Now" />
+                                </form>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </form>
         </div>
     );
 };

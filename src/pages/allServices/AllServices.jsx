@@ -39,11 +39,21 @@ const AllServices = () => {
                 }
             </div>
 
-            {filteredServices.length > 6 && dataLength < filteredServices.length && (
-                <div>
-                    <button onClick={() => setDataLength(filteredServices.length)} className="bg-[#05ac39] text-white flex justify-center mx-auto my-14 text-sm rounded-full px-6 py-3 hover:bg-gray-300 hover:text-black">See More</button>
-                </div>
-            )}
+            {
+                filteredServices.length > 6 && dataLength < filteredServices.length && (
+                    <div>
+                        <button onClick={() => setDataLength(filteredServices.length)} className="bg-[#05ac39] text-white flex justify-center mx-auto my-14 text-sm rounded-full px-6 py-3 hover:bg-gray-300 hover:text-black">See More</button>
+                    </div>
+                )}
+
+            {
+                filteredServices.length === 0 && (
+                    <div className="">
+                        <img className="w-40 flex justify-center mx-auto" src="https://i.ibb.co/ZdMSXnJ/Asset-1.png" alt="" />
+                        <p className="text-red-500 text-center mt-4 text-xl font-semibold">No Service Found</p>
+                    </div>
+
+                )}
         </div>
     );
 };
