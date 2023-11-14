@@ -16,6 +16,7 @@ import AllServices from './pages/allServices/AllServices';
 import MyServices from './pages/myServices/MyServices';
 import MySchedule from './pages/mySchedule/MySchedule';
 import AddService from './pages/addService/AddService';
+import Details from './components/services/Details';
 
 
 
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <AllServices></AllServices>
+      },
+      {
+        path: '/details/:id',
+        element: <Details></Details>,
+        loader: ({params}) => fetch (`http://localhost:5000/service/${params.id}`)
       },
       {
         path: '/myServices',
