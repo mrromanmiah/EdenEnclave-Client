@@ -1,24 +1,24 @@
-// import { useState } from "react";
+
 import { FaLocationDot } from "react-icons/fa6";
 import { ImPriceTag } from "react-icons/im";
 // import Swal from "sweetalert2";
 
 
-const MyServicesCard = ({ myServices}) => {
-    // const [localReset, setLocalReset] = useState(setReset);
+const MyServicesCard = ({ service }) => {
+   
 
-    const { 
+    const { _id,
         ServiceImage, 
         ServiceName, 
         ServiceDescription, 
         ServiceProviderImage,
         ServiceProviderName, 
         ServiceProviderLocation, 
-        ServicePrice } = myServices || {};
+        ServicePrice } = service || {};
 
 
-        // const handleDelete = email => {
-        //     console.log(email);
+        // const handleDelete = _id => {
+        //     console.log(_id);
         //     Swal.fire({
         //         title: 'Are you sure?',
         //         text: "You won't be able to revert this!",
@@ -29,7 +29,7 @@ const MyServicesCard = ({ myServices}) => {
         //         confirmButtonText: 'Yes, delete it!'
         //     }).then((result) => {
         //         if (result.isConfirmed) {
-        //             fetch(`http://localhost:5000/myServices/${email}`, {
+        //             fetch(`http://localhost:5000/myServices/${_id}`, {
         //                 method: 'DELETE'
         //             })
         //                 .then(res => res.json())
@@ -42,8 +42,8 @@ const MyServicesCard = ({ myServices}) => {
         //                             'success'
         //                         )
                                 
-        //                             const remaining = localReset.filter(del => del.email !== email);
-        //                             setLocalReset(remaining);
+        //                             const remaining = reset.filter(del => del._id !== _id);
+                                    
         //                             setReset(remaining);                          
         //                     }
         //                 })
@@ -71,7 +71,7 @@ const MyServicesCard = ({ myServices}) => {
                 
                 <div className="flex gap-4 justify-between mx-auto">
                 <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4">Edit</button>
-                <button  className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4">Delete</button>
+                <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4">Delete</button>
                 </div>
                 
 

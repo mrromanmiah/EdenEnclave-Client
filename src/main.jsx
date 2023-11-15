@@ -55,9 +55,8 @@ const router = createBrowserRouter([
         loader: ({params}) => fetch (`http://localhost:5000/service/${params.id}`)
       },
       {
-        path: '/myServices/:email',
-        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>,
-        loader: ({params}) => fetch (`http://localhost:5000/myServices/${params.email}`)
+        path: '/myServices',
+        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
       },
       {
         path: '/mySchedule',
@@ -73,9 +72,12 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthProvider>
+  
   <React.StrictMode> 
-    <RouterProvider router={router} />  
-  </React.StrictMode>,
-  </AuthProvider>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+      
+  </React.StrictMode>
+  
 )

@@ -1,27 +1,30 @@
-import { useLoaderData, useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MyServicesCard from "./MyServicesCard";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+
 
 
 const MyServices = () => {
-const serviceData = useLoaderData();
-const { email } = useParams();
+    const { user } = useContext(AuthContext)
+    const [myServices, setMyServices] = useState([])
 
-
+    useEffect(() => {
+        fetch(`http://localhost:5000/myServices?email=${user.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setMyServices(data);
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    }, [user.email]);
+    
 
     return (
         <div>
-            {serviceData.length > 0 ? (
-                    serviceData.map((myServices) => (
-                        // <Cart key={cart._id} cart={cart} reset={reset} setReset={setReset}></Cart>
-                        <MyServicesCard key={myServices._id} myServices={myServices}></MyServicesCard>
-                    ))
-                ) : (
-                    <div className="space-y-4">
-                        <img className="w-32 flex justify-center mx-auto" src="https://i.ibb.co/jGFMCF0/cart.png" alt="" />
-                        <p className="text-xl font-bold dark:text-white">Your Cart is Empty</p>
-                    </div>
-                )}
+            {
+                myServices.map(service => <MyServicesCard key={service._id}
+                    service={service}></MyServicesCard>)
+            }
         </div>
     );
 };
