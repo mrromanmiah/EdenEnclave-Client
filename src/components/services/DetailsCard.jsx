@@ -109,22 +109,27 @@ const DetailsCard = ({ details }) => {
                                     <p className="text-sm font-bold">Service Image</p>
                                     <input className="w-full rounded-lg" type="url" name="ServiceImage" id="" value={ServiceImage} readOnly />
                                 </div>
+
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">Service Provider E-mail</p>
                                     <input className="w-full rounded-lg" type="email" name="ServiceProviderEmail" id="" value={ServiceProviderEmail} readOnly />
                                 </div>
+
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">User E-mail</p>
                                     <input className="w-full rounded-lg" type="email" name="UserEmail" id="" value={user.email} readOnly />
                                 </div>
+
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">Service Price</p>
                                     <input className="w-full rounded-lg" type="number" name="ServicePrice" id="" value={ServicePrice} readOnly />
                                 </div>
+
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">Service Taking Date</p>
                                     <input className="w-full rounded-lg border-2 border-[#05ac39]" type="date" name="ServiceDate" id="" />
                                 </div>
+                                
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">Special Instructions</p>
                                     <input className="w-full rounded-lg border-2 border-[#05ac39]" type="text" name="Instructions" id="" placeholder="Give any instruction" />
