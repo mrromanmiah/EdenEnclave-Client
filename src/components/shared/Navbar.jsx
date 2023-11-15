@@ -35,7 +35,7 @@ const Navbar = () => {
 
     document.addEventListener('click', function (event) {
         const dropdown = document.querySelector('.dropdown');
-        if (!dropdown.contains(event.target)) {
+        if (dropdown && !dropdown.contains(event.target)) {
             dropdown.removeAttribute('open');
         }
     });
@@ -146,7 +146,7 @@ const Navbar = () => {
                                     </summary>
                                     <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-md w-52 dark:bg-gray-700 origin-left right-0 left-auto">
                                         <li>
-                                            <NavLink to="/myServices" className='dark:hover:text-[#05ac39]' onClick={closeDropdown}>
+                                            <NavLink to={`/myServices/${user.email}`} className='dark:hover:text-[#05ac39]' onClick={closeDropdown}>
                                                 My Services
                                             </NavLink>
                                         </li>
