@@ -48,9 +48,9 @@ const AllServices = () => {
 
             {
                 filteredServices.length === 0 && (
-                    <div className="">
+                    <div>
                         <img className="w-40 flex justify-center mx-auto" src="https://i.ibb.co/ZdMSXnJ/Asset-1.png" alt="" />
-                        <p className="text-red-500 text-center mt-4 text-xl font-semibold">No Service Found</p>
+                        <p className="text-[#D80032] text-center mt-4 text-xl font-semibold">No Service Found</p>
                     </div>
 
                 )}
