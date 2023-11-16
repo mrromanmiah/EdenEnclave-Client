@@ -66,6 +66,8 @@ const Register = () => {
                 })
             })
     }
+    document.title = "EdenEnclave | Register";
+
     return (
         <div className="dark:bg-[#00160c]">
              <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto pt-8 pb-8">

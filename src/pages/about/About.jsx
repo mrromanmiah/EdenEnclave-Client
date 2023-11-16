@@ -1,6 +1,12 @@
 
 
 const About = () => {
+
+
+
+
+
+    document.title = "EdenEnclave | About";
     return (
        
             <div>

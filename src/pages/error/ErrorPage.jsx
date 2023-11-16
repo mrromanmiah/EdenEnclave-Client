@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 
 const ErrorPage = () => {
+
+    document.title = "EdenEnclave | Error";
     return (
         <div>
             <div className="h-screen w-screen items-center lg:flex md:flex flex-none">

@@ -5,9 +5,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 
 
+
 const MyServices = () => {
     const { user } = useContext(AuthContext)
     const [myServices, setMyServices] = useState([])
+   
 
     const updateServices = (deletedServiceId) => {
         const updatedServices = myServices.filter(service => service._id !== deletedServiceId);
@@ -22,6 +24,8 @@ const MyServices = () => {
             })
             .catch(error => console.error("Error fetching data:", error));
     }, [user.email]);
+
+    document.title = "EdenEnclave | My Services";
 
 
     return (

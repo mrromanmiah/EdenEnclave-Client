@@ -66,10 +66,10 @@ const MyServicesCard = ({ service, updateServices }) => {
                         <p className="flex items-center gap-2"><ImPriceTag></ImPriceTag> ${ServicePrice}.00</p>
                     </div>
 
-                    <div className="flex gap-4 justify-between mx-auto">
+                    <div className="flex gap-6 justify-between mx-auto">
                         <Link to={`/updateService/${_id}`} className="flex-grow">
                             <button className="w-full bg-[#05ac39] text-white text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex justify-center items-center mx-auto gap-3">
-                                Edit <FaEdit />
+                                Update <FaEdit />
                             </button>
                         </Link>
                         <button onClick={() => handleDelete(_id)} className="flex-grow bg-[#D80032] text-white text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex justify-center items-center mx-auto gap-3">

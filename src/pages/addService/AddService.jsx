@@ -59,7 +59,7 @@ const AddService = () => {
     }
 
 
-
+document.title = "EdenEnclave | Add Service";
     return (
         <div className="lg:mx-40 md:mx-10 mx-5 mb-14">
             <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto mt-14">

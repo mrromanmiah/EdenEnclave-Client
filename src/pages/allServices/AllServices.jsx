@@ -3,11 +3,14 @@ import { useState } from "react";
 import AllServicesCard from "./AllServicesCard";
 
 
+
 const AllServices = () => {
 
     const [allServices, setAllServices] = useState([])
     const [dataLength, setDataLength] = useState(6);
     const [search, setSearch] = useState("");
+
+    
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -18,6 +21,9 @@ const AllServices = () => {
     const filteredServices = allServices.filter((service) =>
         service.ServiceName.toLowerCase().includes(search.toLowerCase())
     );
+
+
+    document.title = "EdenEnclave | All Services";
 
     return (
         <div className="mb-14">

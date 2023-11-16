@@ -11,6 +11,9 @@ import Testimonial from "../../components/testimonial/Testimonial";
 
 
 const Home = () => {
+
+
+    document.title = "EdenEnclave | Home";
     return (
         <div>
             <Banner></Banner>

@@ -43,7 +43,7 @@ const DetailsCard = ({ details }) => {
                 if(data.insertedId) {
                     Swal.fire(
                         'Good job!',
-                        'You have added the service successfully!',
+                        'You have booked the service successfully!',
                         'success'
                       )
                 }

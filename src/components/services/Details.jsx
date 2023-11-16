@@ -7,7 +7,7 @@ const {id} = useParams();
 const details = useLoaderData();
 
 
-
+document.title = "EdenEnclave | Details";
 
     return (
         <div>
