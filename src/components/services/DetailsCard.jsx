@@ -24,12 +24,12 @@ const DetailsCard = ({ details }) => {
             const ServiceName = form.ServiceName.value;
             const ServiceImage = form.ServiceImage.value;
             const ServiceProviderEmail = form.ServiceProviderEmail.value;
-            const UserEmail = form.UserEmail.value;
+            const email = form.email.value;
             const ServicePrice = form.ServicePrice.value;
             const ServiceDate = form.ServiceDate.value;
             const Instructions = form.Instructions.value;
 
-            const bookedService = {ServiceName, ServiceImage, ServiceProviderEmail, UserEmail, ServicePrice, ServiceDate, Instructions}
+            const bookedService = {ServiceName, ServiceImage, ServiceProviderEmail, email, ServicePrice, ServiceDate, Instructions}
 
             fetch ('http://localhost:5000/bookings', {
             method: 'POST',
@@ -117,7 +117,7 @@ const DetailsCard = ({ details }) => {
 
                                 <div className="space-y-1">
                                     <p className="text-sm font-bold">User E-mail</p>
-                                    <input className="w-full rounded-lg" type="email" name="UserEmail" id="" value={user.email} readOnly />
+                                    <input className="w-full rounded-lg" type="email" name="email" id="" value={user.email} readOnly />
                                 </div>
 
                                 <div className="space-y-1">
