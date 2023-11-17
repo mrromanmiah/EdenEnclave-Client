@@ -112,11 +112,10 @@ const Login = () => {
             </form>
 
 
-            <div className="divider w-1/3 flex justify-center mx-auto font-medium dark:text-gray-600">OR</div>
-
+            <div className="divider text-[#05ac39] w-1/3 flex justify-center mx-auto font-medium dark:text-gray-600">OR</div>
 
             <div className="space-y-2 pb-20">
-                <button onClick={handleGoogleLogin} className="btn btn-circle p-1 flex items-center mx-auto"><img src={'https://i.ibb.co/vVdgSTt/google-1.png'} alt="" /></button>
+                <button onClick={handleGoogleLogin} className="btn rounded-full px-4 py-2 flex items-center mx-auto">Login With <img className="w-8 h-8" src={'https://i.ibb.co/vVdgSTt/google-1.png'} alt="" /></button>
                 <p className="text-center dark:text-white">Don't have an account? <Link className="text-[#05ac39] font-bold hover:underline" to='/register'>Register</Link></p>
             </div>
         </div>

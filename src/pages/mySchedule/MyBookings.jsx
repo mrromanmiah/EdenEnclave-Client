@@ -10,7 +10,6 @@ const MyBookings = ({ booking, updateBookings }) => {
         ServiceDate,
         ServicePrice } = booking || {};
 
-
     const handleDelete = _id => {
         Swal.fire({
             title: 'Are you sure?',
@@ -42,28 +41,22 @@ const MyBookings = ({ booking, updateBookings }) => {
         });
     };
 
-
-
-
     return (
-        <div className="flex items-center justify-between p-4 border border-gray-300 rounded-xl shadow-md">
-    <div className="flex items-center">
-        <img className="w-28 rounded-xl overflow-hidden" src={ServiceImage} alt="" />
-        <div className="ml-4">
-            <h3 className="text-2xl text-[#05ac39] font-bold">{ServiceName}</h3>
-            <p className="text-gray-500 text-sm">{ServiceDate}</p>
+        <div className="lg:flex md:flex items-center justify-between border-2 p-4 rounded-3xl lg:space-y-0 md:space-y-0 space-y-3" >
+            <div className="flex items-center lg:justify-between md:justify-between gap-6">
+                <img className="w-24 rounded-2xl" src={ServiceImage} alt="" />
+                <div className="space-y-1">
+                    <h3 className="text-xl font-semibold text-[#05ac39]">{ServiceName}</h3>
+                    <p className="text-sm font-medium dark:text-white">{ServiceDate}</p>
+                </div>
+            </div>
+            <div className="flex items-center justify-between gap-6">
+                <p className="text-2xl font-bold dark:text-white">${ServicePrice}.00</p>
+                <button onClick={() => handleDelete(_id)} className="ml-4 bg-[#D80032] rounded-full p-3 flex items-center text-xs text-white hover:bg-gray-300 hover:text-black">
+                    <FaTrashAlt />
+                </button>
+            </div>
         </div>
-    </div>
-    <div className="flex items-center gap-20">
-        <p className="text-xl font-extrabold">${ServicePrice}.00</p>
-        <p className="text-xl font-extrabold">${ServicePrice}.00</p>
-        <button onClick={() => handleDelete(_id)} className="ml-4 bg-[#D80032] btn-sm btn btn-circle text-white hover:bg-gray-300 hover:text-black">
-            <FaTrashAlt />
-        </button>
-    </div>
-</div>
-
-
     );
 };
 
