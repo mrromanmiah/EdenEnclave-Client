@@ -1,34 +1,27 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsCard from "./DetailsCard";
-import OtherServices from "./OtherServices";
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 import { useEffect } from "react";
-
+import OtherServices from "./OtherServices";
 
 const Details = () => {
-const {id, ServiceProviderEmail} = useParams();
-const details = useLoaderData();
+    const { user } = useContext(AuthContext)
+    const { id } = useParams();
+    const details = useLoaderData();
+    const [otherServices, setAOtherServices] = useState([])
 
-const [others, setOthers] = useState()
+    useEffect(() => {
+        fetch(`http://localhost:5000/otherServices?email=${user.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setAOtherServices(data);
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    }, [user.email]);
 
-useEffect(() => {
-    fetch(`http://localhost:5000/services/${ServiceProviderEmail}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data); // Check the console log to see the structure of the response
-        setOthers(data); // Set the state with the response data
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, [ServiceProviderEmail]);
-
-    
-
-
-
-document.title = "EdenEnclave | Details";
-
+    document.title = "EdenEnclave | Details";
     return (
         <div>
             <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto mt-14">
@@ -36,21 +29,27 @@ document.title = "EdenEnclave | Details";
                 <h1 className="text-3xl font-semibold dark:text-white">About This Service</h1>
                 <p className="text-xs dark:text-white">Elevate your outdoor spaces with EdenEnclave. Our skilled team offers tailored gardening services, from meticulous lawn care to custom designs. Experience the joy of a vibrant garden effortlessly with us.</p>
             </div>
-        <div className="lg:mx-20 md:mx-10 mx-5 my-14">
-            <DetailsCard details={details}></DetailsCard>
-            <div>
-        {others?.map((ServiceProviderEmail) => (
-          <OtherServices key={ServiceProviderEmail._id} ServiceProviderEmail={ServiceProviderEmail} />
-        ))}
-      </div>
-        </div>
+            <div className="lg:mx-20 md:mx-10 mx-5 my-14">
+                <DetailsCard details={details}></DetailsCard>
+            </div>
 
-        <div>
-        {others?.map((ServiceProviderEmail) => (
-          <OtherServices key={ServiceProviderEmail._id} ServiceProviderEmail={ServiceProviderEmail} />
-        ))}
-      </div>
-
+            <div className="lg:px-20 md:px-10 px-5 pb-16">
+                <div className="pb-10 space-y-3">
+                    <h1 className="text-2xl font-semibold dark:text-white">
+                         Other Services
+                    </h1>
+                    <hr className="border-2 border-[#05ac39]" />
+                </div>
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                    {
+                        otherServices?.map(service => (
+                            <OtherServices key={service._id}
+                                service={service}
+                            ></OtherServices>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     );
 };

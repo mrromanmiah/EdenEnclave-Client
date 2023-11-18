@@ -1,5 +1,6 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { ImPriceTag } from "react-icons/im";
+import { MdMore } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 
@@ -32,7 +33,7 @@ const AllServicesCard = ({ service }) => {
                     <p className="flex items-center gap-2"><ImPriceTag></ImPriceTag> ${ServicePrice}.00</p>
                 </div>
                 <Link to={`/details/${_id}`}>
-                <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4">Details</button>
+                <button className="bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center">Details <MdMore></MdMore></button>
                 </Link>
 
                 
