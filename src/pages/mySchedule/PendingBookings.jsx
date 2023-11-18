@@ -19,17 +19,21 @@ const PendingBookings = ({ pendingBookings, handleStatus }) => {
             </div>
             <div className="flex items-center justify-between gap-6">
                 <p className="text-base w-full font-bold dark:text-white">{ServiceDate}</p>
-                <select className="select border-[#05ac39] w-full">
-                    <option disabled selected>Set Status</option>
-                    <option>Pending</option>
-                    <option>In Progress</option>
-                    <option>Completed</option>
-                </select>
-                {
-                    status === 'confirm' ? <span className="text-green-500">Confirmed</span> :
+                
+                {<select onChange={()=>handleStatus(_id)} className="select border-[#05ac39] w-full">
+                <option disabled selected>Set Status</option>
+                <option disabled>Pending</option>
+                <option value="inProgress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>}
+            
+                {/* {
+                    status === 'completed' ? <button className="ml-4 bg-[#05ac39] rounded-full px-5 py-2 flex items-center text-xs text-white hover:bg-gray-300 hover:text-black">
+                    Completed
+                </button> :
                 <button onClick={()=>handleStatus(_id)} className="ml-4 bg-[#D80032] rounded-full px-5 py-2 flex items-center text-xs text-white hover:bg-gray-300 hover:text-black">
                     Pending
-                </button>}
+                </button>} */}
             </div>
 
         </div>

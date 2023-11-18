@@ -17,44 +17,44 @@ const DetailsCard = ({ details }) => {
         ServiceProviderEmail,
         ShortDescription } = details || {};
 
-        const handleBookings = event => {
-            event.preventDefault();
-            const form = event.target;
+    const handleBookings = event => {
+        event.preventDefault();
+        const form = event.target;
 
-            const ServiceName = form.ServiceName.value;
-            const ServiceImage = form.ServiceImage.value;
-            const ServiceProviderEmail = form.ServiceProviderEmail.value;
-            const email = form.email.value;
-            const ServicePrice = form.ServicePrice.value;
-            const ServiceDate = form.ServiceDate.value;
-            const Instructions = form.Instructions.value;
+        const ServiceName = form.ServiceName.value;
+        const ServiceImage = form.ServiceImage.value;
+        const ServiceProviderEmail = form.ServiceProviderEmail.value;
+        const email = form.email.value;
+        const ServicePrice = form.ServicePrice.value;
+        const ServiceDate = form.ServiceDate.value;
+        const Instructions = form.Instructions.value;
 
-            const bookedService = {ServiceName, ServiceImage, ServiceProviderEmail, email, ServicePrice, ServiceDate, Instructions}
+        const bookedService = { ServiceName, ServiceImage, ServiceProviderEmail, email, ServicePrice, ServiceDate, Instructions }
 
-            fetch ('http://localhost:5000/bookings', {
+        fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(bookedService)
-            })
-            .then (res => res.json())
-            .then (data => {
-                if(data.insertedId) {
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
                     Swal.fire(
                         'Good job!',
                         'You have booked the service successfully!',
                         'success'
-                      )
+                    )
                 }
             })
 
 
 
-            const modal = document.getElementById('my_modal_3');
-            modal.close();
+        const modal = document.getElementById('my_modal_3');
+        modal.close();
 
-        }
+    }
 
 
 
@@ -100,45 +100,45 @@ const DetailsCard = ({ details }) => {
                                 <h3 className="font-bold text-lg mb-2 text-[#05ac39]">Please fill in the required fields.</h3>
 
                                 <div className="space-y-3">
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">Service Name</p>
-                                    <input className="w-full rounded-lg" type="text" name="ServiceName" id="" value={ServiceName} readOnly />
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">Service Name</p>
+                                        <input className="w-full rounded-lg" type="text" name="ServiceName" id="" value={ServiceName} readOnly />
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">Service Image</p>
+                                        <input className="w-full rounded-lg" type="url" name="ServiceImage" id="" value={ServiceImage} readOnly />
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">Service Provider E-mail</p>
+                                        <input className="w-full rounded-lg" type="email" name="ServiceProviderEmail" id="" value={ServiceProviderEmail} readOnly />
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">User E-mail</p>
+                                        <input className="w-full rounded-lg" type="email" name="email" id="" value={user.email} readOnly />
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">Service Price</p>
+                                        <input className="w-full rounded-lg" type="number" name="ServicePrice" id="" value={ServicePrice} readOnly />
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">Service Taking Date</p>
+                                        <input className="w-full rounded-lg border-2 border-[#05ac39]" type="date" name="ServiceDate" id="" />
+                                    </div>
+
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-bold">Special Instructions</p>
+                                        <input className="w-full rounded-lg border-2 border-[#05ac39]" type="text" name="Instructions" id="" placeholder="Give any instruction" />
+                                    </div>
                                 </div>
 
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">Service Image</p>
-                                    <input className="w-full rounded-lg" type="url" name="ServiceImage" id="" value={ServiceImage} readOnly />
-                                </div>
 
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">Service Provider E-mail</p>
-                                    <input className="w-full rounded-lg" type="email" name="ServiceProviderEmail" id="" value={ServiceProviderEmail} readOnly />
-                                </div>
+                                <input className="modal-action bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center" method="dialog" type="submit" value="Book Now" />
 
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">User E-mail</p>
-                                    <input className="w-full rounded-lg" type="email" name="email" id="" value={user.email} readOnly />
-                                </div>
-
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">Service Price</p>
-                                    <input className="w-full rounded-lg" type="number" name="ServicePrice" id="" value={ServicePrice} readOnly />
-                                </div>
-
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">Service Taking Date</p>
-                                    <input className="w-full rounded-lg border-2 border-[#05ac39]" type="date" name="ServiceDate" id="" />
-                                </div>
-                                
-                                <div className="space-y-1">
-                                    <p className="text-sm font-bold">Special Instructions</p>
-                                    <input className="w-full rounded-lg border-2 border-[#05ac39]" type="text" name="Instructions" id="" placeholder="Give any instruction" />
-                                </div>
-                                </div>
-
-                                
-                                    <input className="modal-action bg-[#05ac39] text-white w-full text-sm rounded-xl px-6 py-2 hover:bg-gray-300 hover:text-black mt-4 flex items-center gap-2 justify-center" method="dialog" type="submit" value="Book Now" />
-                                
                             </form>
                         </dialog>
                     </div>

@@ -1,10 +1,30 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsCard from "./DetailsCard";
+import OtherServices from "./OtherServices";
+import { useState } from "react";
+import { useEffect } from "react";
 
 
 const Details = () => {
-const {id} = useParams();
+const {id, ServiceProviderEmail} = useParams();
 const details = useLoaderData();
+
+const [others, setOthers] = useState()
+
+useEffect(() => {
+    fetch(`http://localhost:5000/services/${ServiceProviderEmail}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data); // Check the console log to see the structure of the response
+        setOthers(data); // Set the state with the response data
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, [ServiceProviderEmail]);
+
+    
+
 
 
 document.title = "EdenEnclave | Details";
@@ -18,7 +38,19 @@ document.title = "EdenEnclave | Details";
             </div>
         <div className="lg:mx-20 md:mx-10 mx-5 my-14">
             <DetailsCard details={details}></DetailsCard>
+            <div>
+        {others?.map((ServiceProviderEmail) => (
+          <OtherServices key={ServiceProviderEmail._id} ServiceProviderEmail={ServiceProviderEmail} />
+        ))}
+      </div>
         </div>
+
+        <div>
+        {others?.map((ServiceProviderEmail) => (
+          <OtherServices key={ServiceProviderEmail._id} ServiceProviderEmail={ServiceProviderEmail} />
+        ))}
+      </div>
+
         </div>
     );
 };

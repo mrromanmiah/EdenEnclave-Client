@@ -46,20 +46,20 @@ const MySchedule = () => {
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({status: 'confirm'})
+        body: JSON.stringify({status: 'completed'})
         })
         .then((res) => res.json())
         .then((data) => {
             if(data.modifiedCount > 0){
             const remaining = pendingBookings.filter(pendingBooking => pendingBooking._id !== id);
             const statusUpdated = pendingBookings.find(pendingBooking => pendingBooking._id === id);
-            statusUpdated.status = 'inProgress'
-            statusUpdated.status = 'confirm'   
+            statusUpdated.status = 'completed'
             const newUpdatedBookings = [statusUpdated, ...remaining];
-            setPendingBookings(newUpdatedBookings);
+            setPendingBookings(newUpdatedBookings)
             }
         })
     };
+
     
 
     document.title = "EdenEnclave | My Schedule";
