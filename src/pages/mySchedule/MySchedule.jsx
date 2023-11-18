@@ -38,6 +38,28 @@ const MySchedule = () => {
         fetchMyBookings();
         fetchPendingBookings();
     }, [user.email]);
+
+
+    const handleStatus = id => {
+        fetch(`http://localhost:5000/bookings/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({status: 'confirm'})
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.modifiedCount > 0){
+            const remaining = pendingBookings.filter(pendingBooking => pendingBooking._id !== id);
+            const statusUpdated = pendingBookings.find(pendingBooking => pendingBooking._id === id);
+            statusUpdated.status = 'inProgress'
+            statusUpdated.status = 'confirm'   
+            const newUpdatedBookings = [statusUpdated, ...remaining];
+            setPendingBookings(newUpdatedBookings);
+            }
+        })
+    };
     
 
     document.title = "EdenEnclave | My Schedule";
@@ -93,6 +115,7 @@ const MySchedule = () => {
                             <PendingBookings
                                 key={pendingBooking._id}
                                 pendingBookings={pendingBooking}
+                                handleStatus={handleStatus}
                             ></PendingBookings>
                         ))
                     ) : (

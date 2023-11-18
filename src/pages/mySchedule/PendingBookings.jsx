@@ -1,11 +1,11 @@
 
 
-const PendingBookings = ({ pendingBookings }) => {
+const PendingBookings = ({ pendingBookings, handleStatus }) => {
 
-    const { ServiceImage,
+    const { _id, ServiceImage,
         ServiceName,
         ServiceDate,
-        email } = pendingBookings || {};
+        email, status } = pendingBookings || {};
 
     return (
         <div className="lg:flex md:flex-none items-center justify-between border-2 p-4 rounded-3xl lg:space-y-0 md:space-y-3 space-y-3" >
@@ -25,9 +25,11 @@ const PendingBookings = ({ pendingBookings }) => {
                     <option>In Progress</option>
                     <option>Completed</option>
                 </select>
-                <button className="ml-4 bg-[#D80032] rounded-full px-5 py-2 flex items-center text-xs text-white hover:bg-gray-300 hover:text-black">
+                {
+                    status === 'confirm' ? <span className="text-green-500">Confirmed</span> :
+                <button onClick={()=>handleStatus(_id)} className="ml-4 bg-[#D80032] rounded-full px-5 py-2 flex items-center text-xs text-white hover:bg-gray-300 hover:text-black">
                     Pending
-                </button>
+                </button>}
             </div>
 
         </div>
