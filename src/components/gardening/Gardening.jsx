@@ -9,16 +9,17 @@ const Gardening = () => {
         <div className="lg:flex items-center mt-16 lg:mx-20 md:mx-10 mx-5 gap-12">
 
             <div className="grid grid-cols-2 gap-3 lg:w-1/2">
-                <div className="row-span-2">
-                    <img src="https://i.ibb.co/x1gsyKG/young-handsome-cheerful-gardener-smiling-taking-care-flowers-1-1.jpg" alt="Image 1" className="w-full h-full object-cover rounded-l-3xl" />
+                <div className="row-span-2 relative overflow-hidden group rounded-l-3xl">
+                    <img src="https://i.ibb.co/x1gsyKG/young-handsome-cheerful-gardener-smiling-taking-care-flowers-1-1.jpg" alt="Image 1" className="w-full h-full object-cover transition-transform transform scale-100 group-hover:scale-110 rounded-l-3xl" />
                 </div>
-                <div>
-                    <img src="https://i.ibb.co/cN1hZGt/beautiful-redhead-smiling-florist-apron-working-with-flowers-young-lady-standing-with-big-flower-han.jpg" alt="Image 2" className="w-full h-full object-cover rounded-r-3xl rounded-bl-3xl" />
+                <div className="relative overflow-hidden group rounded-r-3xl rounded-bl-3xl">
+                    <img src="https://i.ibb.co/cN1hZGt/beautiful-redhead-smiling-florist-apron-working-with-flowers-young-lady-standing-with-big-flower-han.jpg" alt="Image 2" className="w-full h-full object-cover transition-transform transform scale-100 group-hover:scale-110 rounded-r-3xl rounded-bl-3xl" />
                 </div>
-                <div>
-                    <img src="https://i.ibb.co/2SLwrFj/plants-gardening-tools-close-up-1.jpg" alt="Image 3" className="w-full h-full object-cover rounded-r-3xl rounded-tl-3xl" />
+                <div className="relative overflow-hidden group rounded-r-3xl rounded-tl-3xl">
+                    <img src="https://i.ibb.co/2SLwrFj/plants-gardening-tools-close-up-1.jpg" alt="Image 3" className="w-full h-full object-cover transition-transform transform scale-100 group-hover:scale-110 rounded-r-3xl rounded-tl-3xl" />
                 </div>
             </div>
+
 
             <div className="lg:w-1/2 space-y-4">
                 <div className="space-y-4">
@@ -36,9 +37,9 @@ const Gardening = () => {
                     </div>
                     <div className="bg-gradient-to-bl from-black via-[#02250e] to-[#036424] p-6 text-center rounded-3xl">
                         <h1 className="text-3xl text-white font-semibold"><CountUp
-            end={20}
-            duration={4}
-            />+</h1>
+                            end={20}
+                            duration={4}
+                        />+</h1>
                         <p className="text-sm text-white font-medium">Year of working experiance</p>
                     </div>
                 </div>
