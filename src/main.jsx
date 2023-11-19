@@ -53,12 +53,12 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch (`http://localhost:5000/service/${params.id}`)
+        loader: ({params}) => fetch (`https://eden-enclave-server.vercel.app/service/${params.id}`)
       },
       {
         path: '/updateService/:id',
         element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
-        loader: ({params}) => fetch (`http://localhost:5000/updateService/${params.id}`)
+        loader: ({params}) => fetch (`https://eden-enclave-server.vercel.app/updateService/${params.id}`)
       },
       {
         path: '/myServices',

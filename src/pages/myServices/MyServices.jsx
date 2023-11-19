@@ -17,7 +17,7 @@ const MyServices = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myServices?email=${user.email}`)
+        fetch(`https://eden-enclave-server.vercel.app/myServices?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyServices(data);

@@ -31,7 +31,7 @@ const DetailsCard = ({ details }) => {
 
         const bookedService = { ServiceName, ServiceImage, ServiceProviderEmail, email, ServicePrice, ServiceDate, Instructions }
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://eden-enclave-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -51,7 +51,7 @@ const UpdateService = () => {
             displayName
         }
 
-        fetch(`http://localhost:5000/updateService/${_id}`, {
+        fetch(`https://eden-enclave-server.vercel.app/updateService/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

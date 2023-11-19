@@ -69,7 +69,7 @@ const News = () => {
     </div>
 </div>
 
-<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]" data-aos="zoom-in"
+<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white shadow-sm rounded-xl dark:bg-slate-900  dark:shadow-slate-700/[.7]" data-aos="zoom-in"
      data-aos-duration="1000">
     <img className="w-full h-full rounded-xl transition-transform transform scale-100 group-hover:scale-110" src="https://i.ibb.co/qRvgJKv/tuxpi-com-1699420659.jpg" alt="News Image" />
     <div className="absolute bottom-0 start-0 end-0">

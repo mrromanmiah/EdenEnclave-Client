@@ -13,7 +13,7 @@ const Details = () => {
     const [otherServices, setAOtherServices] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/otherServices?email=${user.email}`)
+        fetch(`https://eden-enclave-server.vercel.app/otherServices?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setAOtherServices(data);

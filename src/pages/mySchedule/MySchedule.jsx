@@ -17,7 +17,7 @@ const MySchedule = () => {
     };
 
     const fetchMyBookings = () => {
-        fetch(`http://localhost:5000/myBookings?email=${user.email}`, {credentials: 'include'})
+        fetch(`https://eden-enclave-server.vercel.app/myBookings?email=${user.email}`, {credentials: 'include'})
             .then((res) => res.json())
             .then((data) => {
                 setMyBookings(data);
@@ -26,7 +26,7 @@ const MySchedule = () => {
     };
 
     const fetchPendingBookings = () => {
-        fetch("http://localhost:5000/bookings")
+        fetch("https://eden-enclave-server.vercel.app/bookings")
             .then((res) => res.json())
             .then((data) => {
                 setPendingBookings(data);
@@ -47,7 +47,7 @@ const MySchedule = () => {
     
             return updatedPendingBookings;
         });
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://eden-enclave-server.vercel.app/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
