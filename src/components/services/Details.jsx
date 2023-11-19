@@ -34,22 +34,21 @@ const Details = () => {
             </div>
 
             <div className="lg:px-20 md:px-10 px-5 pb-16">
-                <div className="pb-10 space-y-3">
-                    <h1 className="text-2xl font-semibold dark:text-white">
-                         Other Services
-                    </h1>
-                    <hr className="border-2 border-[#05ac39]" />
-                </div>
+                {otherServices && otherServices.length > 0 && (
+                    <div className="pb-10 space-y-3">
+                        <h1 className="text-2xl font-semibold dark:text-white">
+                            Other Services
+                        </h1>
+                        <hr className="border-2 border-[#05ac39]" />
+                    </div>
+                )}
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
-                    {
-                        otherServices?.map(service => (
-                            <OtherServices key={service._id}
-                                service={service}
-                            ></OtherServices>
-                        ))
-                    }
+                    {otherServices?.map((service) => (
+                        <OtherServices key={service._id} service={service}></OtherServices>
+                    ))}
                 </div>
             </div>
+
         </div>
     );
 };

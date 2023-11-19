@@ -23,8 +23,6 @@ const OtherServices = ({ service }) => {
       </div>
 
       <div className=" space-y-3">
-
-
         <div className="space-y-3 py-3">
           <h1 className="text-lg text-[#05ac39] font-semibold text-center">{ServiceName}</h1>
           <p className="text-gray-500 text-xs dark:text-white mb-4 text-center">

@@ -9,9 +9,9 @@ const LatestProjects = () => {
     return (
         <div className='mt-14 lg:mx-40'>
             <div className="space-y-2 text-center lg:w-1/2 md:w-1/2 w-2/3 flex flex-col justify-center mx-auto">
-                <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Latest Projects</p>
-                <h1 className="text-3xl font-semibold dark:text-white">Complete Projects</h1>
-                <p className="text-xs dark:text-white">Check out our latest projects where we've transformed ordinary spaces into lush paradises. From vibrant flower beds to serene landscapes, our gardening experts bring dreams to bloom. Explore the beauty we've sown, one garden at a time.</p>
+                <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5" data-aos="fade-down">Latest Projects</p>
+                <h1 className="text-3xl font-semibold dark:text-white" data-aos="fade-up">Complete Projects</h1>
+                <p className="text-xs dark:text-white" data-aos="zoom-in">Check out our latest projects where we've transformed ordinary spaces into lush paradises. From vibrant flower beds to serene landscapes, our gardening experts bring dreams to bloom. Explore the beauty we've sown, one garden at a time.</p>
             </div>
 
             <div>

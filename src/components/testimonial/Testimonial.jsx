@@ -5,8 +5,8 @@ const Testimonial = () => {
         <div className='bg-[url(https://i.ibb.co/qmMZbm2/Asset-2-100.jpg)] bg-cover bg-no-repeat rounded-3xl overflow-hidden lg:mx-40 md:mx-10 mx-5 mt-14'>
             <div className="items-center lg:pt-10 md:pt-10 pt-7 lg:pb-32 md:pb-24 pb-16 lg:px-20 md:px-20 px-10">
                 <div className="space-y-2">
-                    <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5">Testimonials</p>
-                    <h1 className="text-3xl text-white font-semibold dark:text-white">Our Client Reviews</h1>
+                    <p className="text-[#05ac39] font-medium lg:mt-0 md:mt-5 mt-5" data-aos="fade-down">Testimonials</p>
+                    <h1 className="text-3xl text-white font-semibold dark:text-white" data-aos="fade-up">Our Client Reviews</h1>
                     <div className="lg:w-1/2 md:w-1/2 w-full">
                         <swiper-container>
                             <swiper-slide><div className="pr-10 pt-5">
