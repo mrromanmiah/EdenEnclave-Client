@@ -2,7 +2,7 @@
 
 const Features = () => {
     return (
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-center gap-6 mx-20 pt-14">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-center gap-6 lg:mx-20 md:mx-20 mx-5 pt-14">
             <div className="feature-card group overflow-hidden hover:scale-105 transition-transform rounded-3xl space-y-3 p-10 items-center text-center mx-auto bg-black hover:bg-gradient-to-b from-black via-[#02250e] to-[#036424]" data-aos="zoom-in">
                 <img className="icon-image hover:scale-105 transition-transform flex items-center justify-center mx-auto w-16 h-16" src="https://i.ibb.co/L98mCP3/service-icon-1.png" alt="" />
                 <h3 className="text-white text-lg font-semibold">Gardening</h3>

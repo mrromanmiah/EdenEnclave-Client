@@ -2,7 +2,7 @@ import CountUp from 'react-countup';
 
 const Statistics = () => {
     return (
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mx-20 gap-6 
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:mx-20 md:mx-20 mx-5 gap-6 
         lg:-mt-12 md:mt-14 mt-14'>
             <div className="flex items-center gap-4 bg-gradient-to-r from-black via-[#02250e] to-[#036424] p-6 rounded-2xl">           
                 <div>
