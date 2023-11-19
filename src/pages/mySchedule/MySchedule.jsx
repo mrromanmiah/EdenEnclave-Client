@@ -17,7 +17,7 @@ const MySchedule = () => {
     };
 
     const fetchMyBookings = () => {
-        fetch(`http://localhost:5000/myBookings?email=${user.email}`)
+        fetch(`http://localhost:5000/myBookings?email=${user.email}`, {credentials: 'include'})
             .then((res) => res.json())
             .then((data) => {
                 setMyBookings(data);
