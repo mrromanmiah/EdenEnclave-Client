@@ -6,7 +6,7 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const Gardening = () => {
     return (
-        <div className="lg:flex items-center mt-16 lg:mx-20 md:mx-10 mx-5 gap-12">
+        <div className="lg:flex items-center mt-16 lg:mx-20 md:mx-20 mx-5 gap-12">
 
             <div className="grid grid-cols-2 gap-3 lg:w-1/2">
                 <div className="row-span-2 relative overflow-hidden group rounded-l-3xl">

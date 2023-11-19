@@ -11,9 +11,9 @@ const News = () => {
 
             <div>
 
-            <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 gap-3 mt-14 lg:mx-40 md:mx-10 mx-5">
+            <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 gap-6 mt-14 lg:mx-40 md:mx-10 mx-5">
 
-<div className="lg:row-span-2 lg:col-span-2 relative overflow-hidden group bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]" data-aos="zoom-out"
+<div className="lg:row-span-2 lg:col-span-2 relative overflow-hidden group bg-white  shadow-lg rounded-xl dark:bg-[#00160c] dark:shadow-[#05ac39]" data-aos="zoom-in"
      data-aos-duration="500">
     <img className="w-full h-full rounded-xl transition-transform transform scale-100 group-hover:scale-110" src="https://i.ibb.co/chpLBgS/tuxpi-com-1699420614.jpg" alt="News Image" />
     <div className="absolute bottom-0 start-0 end-0">
@@ -27,7 +27,7 @@ const News = () => {
     </div>
 </div>
 
-<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]" data-aos="zoom-in"
+<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white  shadow-lg rounded-xl dark:bg-[#00160c] dark:shadow-[#05ac39]" data-aos="zoom-in"
      data-aos-duration="700">
     <img className="w-full h-full rounded-xl transition-transform transform scale-100 group-hover:scale-110" src="https://i.ibb.co/Pcpr0CX/tuxpi-com-1699420641.jpg" alt="News Image" />
     <div className="absolute bottom-0 start-0 end-0">
@@ -41,7 +41,7 @@ const News = () => {
     </div>
 </div>
 
-<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]" data-aos="zoom-in"
+<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white  shadow-lg rounded-xl dark:bg-[#00160c] dark:shadow-[#05ac39]" data-aos="zoom-in"
      data-aos-duration="1600">
     <img className="w-full h-full rounded-xl transition-transform transform scale-100 group-hover:scale-110" src="https://i.ibb.co/Wg212L9/tuxpi-com-1699420681.jpg" alt="News Image" />
     <div className="absolute bottom-0 start-0 end-0">
@@ -55,7 +55,7 @@ const News = () => {
     </div>
 </div>
 
-<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]" data-aos="zoom-in"
+<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white  shadow-lg rounded-xl dark:bg-[#00160c] dark:shadow-[#05ac39]" data-aos="zoom-in"
      data-aos-duration="1300">
     <img className="w-full h-full rounded-xl transition-transform transform scale-100 group-hover:scale-110" src="https://i.ibb.co/XLC4G3Z/tuxpi-com-1699420698.jpg" alt="News Image" />
     <div className="absolute bottom-0 start-0 end-0">
@@ -69,7 +69,7 @@ const News = () => {
     </div>
 </div>
 
-<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white shadow-sm rounded-xl dark:bg-slate-900  dark:shadow-slate-700/[.7]" data-aos="zoom-in"
+<div className="row-span-1 col-span-1 relative overflow-hidden group bg-white shadow-lg rounded-xl dark:bg-[#00160c]  dark:shadow-[#05ac39]" data-aos="zoom-in"
      data-aos-duration="1000">
     <img className="w-full h-full rounded-xl transition-transform transform scale-100 group-hover:scale-110" src="https://i.ibb.co/qRvgJKv/tuxpi-com-1699420659.jpg" alt="News Image" />
     <div className="absolute bottom-0 start-0 end-0">
